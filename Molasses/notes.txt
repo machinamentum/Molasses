@@ -1,0 +1,5 @@
+This is not a "complete" library.
+Some classes are incomplete or are a work-in-progress.
+The javadoc is a work-in-progress.
+Asteroids is an example of the use of this library.
+The latest changes and updates can be found at https://github.com/joshhuelsman
