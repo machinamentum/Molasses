@@ -21,10 +21,10 @@ public strictfp class Matrix4f {
 	 */
 	public Vector4f mul(Vector4f vec) {
 		Vector4f ret = new Vector4f();
-		ret.x = m00 * vec.x + m01 * vec.y + m02 * vec.z + m03 * 1;
-		ret.y = m10 * vec.x + m11 * vec.y + m12 * vec.z + m13 * 1;
-		ret.z = m20 * vec.x + m21 * vec.y + m22 * vec.z + m23 * 1;
-		ret.w = m30 * vec.x + m31 * vec.y + m32 * vec.z + m33 * 1;
+		ret.x = m00 * vec.x + m01 * vec.y + m02 * vec.z + m03 * vec.w;
+		ret.y = m10 * vec.x + m11 * vec.y + m12 * vec.z + m13 * vec.w;
+		ret.z = m20 * vec.x + m21 * vec.y + m22 * vec.z + m23 * vec.w;
+		ret.w = m30 * vec.x + m31 * vec.y + m32 * vec.z + m33 * vec.w;
 		return ret;
 	}
 	
