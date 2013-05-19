@@ -5,7 +5,7 @@
  */
 package com.joshuahuelsman.molasses.vector;
 
-public class Vector3f extends Vector {
+public strictfp class Vector3f extends Vector {
 	
 	public float x;
 

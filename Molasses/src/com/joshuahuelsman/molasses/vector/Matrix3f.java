@@ -5,7 +5,7 @@
  */
 package com.joshuahuelsman.molasses.vector;
 
-public class Matrix3f {
+public strictfp class Matrix3f {
 	
 	public float m00, m01, m02;
 	public float m10, m11, m12;
