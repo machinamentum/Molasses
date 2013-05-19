@@ -14,7 +14,7 @@ public class BasicMoveComponent extends Component {
 	private float speed = 0.2f;
 	
 	public BasicMoveComponent(Vector2f dir) {
-		direction = new Vector2f(dir).normalise();
+		direction = (Vector2f)new Vector2f(dir).normalise();
 	}
 
 	@Override
