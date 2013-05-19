@@ -5,7 +5,7 @@
  */
 package com.joshuahuelsman.molasses.vector;
 
-public strictfp class Vector2f {
+public strictfp class Vector2f extends Vector {
 	
 	public float x;
 	
@@ -46,37 +46,15 @@ public strictfp class Vector2f {
 		return new Vector2f(-x, -y);
 	}
 	
-	/**
-	 * Negates this Vector2.
-	 * @return this Vector2. Useful for
-	 * chaining operations.
-	 */
-	public Vector2f negateLocal() {
-		this.x *= -1;
-		this.y *= -1;
-		return this;
-	}
-	
-	public Vector2f normalise() {
-		float length = length();
-		
-		if(length == 0) {
-			return this;
-		}
-		
-		x /= length;
-		y /= length;
-		return this;
-	}
-	
-	public float length() {
-		return (float) Math.sqrt((x * x) + (y * y));
-	}
-	
 	public Vector2f scale(float s) {
 		x *= s;
 		y *= s;
 		return this;
+	}
+
+	@Override
+	public float lengthSquared() {
+		return (x * x) + (y * y);
 	}
 
 }
