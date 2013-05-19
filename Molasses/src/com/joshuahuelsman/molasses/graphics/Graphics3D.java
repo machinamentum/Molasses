@@ -6,7 +6,7 @@
 package com.joshuahuelsman.molasses.graphics;
 
 import com.joshuahuelsman.molasses.vector.Matrix4f;
-import com.joshuahuelsman.molasses.vector.Vector3f;
+import com.joshuahuelsman.molasses.vector.Vector4f;
 
 /**
  * This is an experimental 3D software renderer.
@@ -21,11 +21,14 @@ public class Graphics3D extends Graphics {
 	Matrix4f f = Matrix4f.scale(-1, -1, 1);
 	
 	public void drawLine(float x1, float y1, float z1, float x2, float y2, float z2) {
-		Vector3f v1 = new Vector3f(x1, y1, z1);
-		Vector3f v2 = new Vector3f(x2, y2, z2);
+		Vector4f v1 = new Vector4f(x1, y1, z1, 1);
+		Vector4f v2 = new Vector4f(x2, y2, z2, 1);
 		
 		v1 = proj.mul(v1);
 		v2 = proj.mul(v2);
+		
+		v1.scale(1f / v1.w);
+		v2.scale(1f / v2.w);
 		
 		v1 = f.mul(v1);
 		v2 = f.mul(v2);
