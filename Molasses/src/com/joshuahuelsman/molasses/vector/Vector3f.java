@@ -28,6 +28,10 @@ public class Vector3f extends Vector {
 		this.y = vec.y;
 		this.z = vec.z;
 	}
+	
+	public Vector3f(Vector2f vec, float z) {
+		this(vec.x, vec.y, z);
+	}
 
 	/**
 	 * Adds the given Vector3 component- wise to this Vector3.
