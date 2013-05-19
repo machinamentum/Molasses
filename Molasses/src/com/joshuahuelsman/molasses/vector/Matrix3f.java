@@ -62,6 +62,11 @@ public class Matrix3f {
 		m22 = val;
 	}
 	
-	
+	public static Matrix3f translate(float x, float y) {
+		Matrix3f m = setIdentity(new Matrix3f());
+		m.m02 = x;
+		m.m12 = y;
+		return m;
+	}
 	
 }
